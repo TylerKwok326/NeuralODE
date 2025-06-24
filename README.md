@@ -7,9 +7,11 @@ The original dataset was processed by selecting one representative subject (s01)
 
 A comprehensive quality control pipeline was implemented including: (1) detection of NaN and infinite values, (2) signal quality assessment per electrode through variance and range analysis, (3) outlier detection using z-score thresholding (>5 standard deviations), (4) temporal consistency verification, and (5) behavioral-neural alignment validation.
 
-Outlier Handling: Given the presence of 7,916 extreme outliers across electrodes (1,352-3,918 per electrode), conservative clipping at 6 standard deviations was applied to preserve signal integrity while removing artifacts.
+### Outlier Handling: 
+Given the presence of 7,916 extreme outliers across electrodes (1,352-3,918 per electrode), conservative clipping at 6 standard deviations was applied to preserve signal integrity while removing artifacts.
 
-Behavioral-Neural Alignment: A mismatch between 200 behavioral trials and 180 neural trials was addressed by truncating the behavioral data to match the neural recordings, ensuring proper temporal alignment.
+### Behavioral-Neural Alignment: 
+A mismatch between 200 behavioral trials and 180 neural trials was addressed by truncating the behavioral data to match the neural recordings, ensuring proper temporal alignment.
 
 ## Neural ODE Architecture
 A compact Neural ODE architecture was designed and optimized for the 5-electrode OFC dataset:
